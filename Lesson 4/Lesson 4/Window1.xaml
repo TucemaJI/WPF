@@ -1,0 +1,17 @@
+﻿<Window x:Class="Lesson_4.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window1" Height="429" Width="299">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="223*" />
+            <RowDefinition Height="87*" />
+            <RowDefinition Height="81*" />
+        </Grid.RowDefinitions>
+        <Image Name="Image1" Stretch="Fill"  />
+        <ListBox Name="ListBox1" Grid.Row="1" />
+        <Image Grid.Column="1" Name="Image2" Stretch="Fill" Grid.RowSpan="2" />
+        <Button Grid.Row="2" Margin="49,31,59,19" Name="Button1">Load Image</Button>
+    </Grid>
+</Window>
+
