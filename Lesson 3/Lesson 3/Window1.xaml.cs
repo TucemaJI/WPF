@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Lesson_3.Properties;
+using System;
+using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Resources;
 
 namespace Lesson_3
 {
@@ -22,6 +14,14 @@ namespace Lesson_3
         public Window1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            StreamResourceInfo info = Application.GetResourceStream(new Uri(Settings.Default.TextName, UriKind.Relative));
+            var aReader = new StreamReader(info.Stream);
+            label1.Content = aReader.ReadToEnd();
+            aReader.Close();
         }
     }
 }

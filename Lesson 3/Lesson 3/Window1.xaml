@@ -8,9 +8,9 @@
             <RowDefinition Height="52*" />
             <RowDefinition Height="41*" />
         </Grid.RowDefinitions>
-        <Image Margin="0" Name="image1" Stretch="Fill" />
+        <Image Source="Humpback Whale.jpg" Margin="0" Name="image1" Stretch="Fill" />
         <Label Grid.Row="1" Margin="0" Name="label1"></Label>
-        <Button Grid.Row="2" Margin="101,8,102,10" Name="button1">Load Text</Button>
+        <Button Grid.Row="2" Margin="101,8,102,10" Name="button1" Click="button1_Click">Load Text</Button>
     </Grid>
 </Window>
 
