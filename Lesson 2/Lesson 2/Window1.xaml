@@ -7,6 +7,12 @@
             <RowDefinition Height="214*" />
             <RowDefinition Height="48*" />
         </Grid.RowDefinitions>
-        <ToolBar Grid.Row="1"  Name="toolBar1" />
+        <MediaElement MediaFailed="MediaElement1_MediaFailed" LoadedBehavior="Manual" Margin="0" Name="MediaElement1"/>
+        <ToolBar Grid.Row="1"  Name="toolBar1">
+            <Button Click="Button_Click">Open</Button>
+            <Button Click="Button_Click_1">Play</Button>
+            <Button Click="Button_Click_2">Pause</Button>
+            <Button Click="Button_Click_3">Stop</Button>
+        </ToolBar>
     </Grid>
 </Window>
