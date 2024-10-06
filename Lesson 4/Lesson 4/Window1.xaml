@@ -11,7 +11,7 @@
         <Image Name="Image1" Stretch="Fill"  />
         <ListBox Name="ListBox1" Grid.Row="1" />
         <Image Grid.Column="1" Name="Image2" Stretch="Fill" Grid.RowSpan="2" />
-        <Button Grid.Row="2" Margin="49,31,59,19" Name="Button1">Load Image</Button>
+        <Button Grid.Row="2" Margin="49,31,59,19" Name="Button1" Click="Button1_Click">Load Image</Button>
     </Grid>
 </Window>
 
