@@ -5,8 +5,10 @@
     <DockPanel>
         <ToolBar DockPanel.Dock="Top" Height="26" Name="toolBar1" Width="276" >
             <Slider Name="Slider1" Minimum="2" Maximum="72" Width="100" />
-            <TextBox BorderBrush="Black" Width="25"></TextBox>
-            <TextBox BorderBrush="Black" Width="100"></TextBox>
+            <TextBox Text="{Binding ElementName=Slider1, Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     BorderBrush="Black" Width="25"></TextBox>
+            <TextBox Text="{Binding ElementName=listBox1, Path=SelectedItem.Content}" BorderBrush="Black" Width="100">
+            </TextBox>
         </ToolBar>
         <Grid Name="grid1">
             <Grid.ColumnDefinitions>
@@ -16,7 +18,9 @@
             </Grid.ColumnDefinitions>
             <ListBox Grid.Column="0" Name="listBox1"></ListBox>
             <GridSplitter Name="gridSplitter1" Margin="0" Width="5" Grid.Column="1" HorizontalAlignment="Left" />
-            <RichTextBox Grid.Column="2" Name="richTextBox1" />
+            <RichTextBox FontSize="{Binding ElementName=Slider1, Path=Value}"
+                         FontFamily="{Binding ElementName=listBox1, Path=SelectedItem.Content}" Grid.Column="2"
+                         Name="richTextBox1" />
         </Grid>
 
     </DockPanel>

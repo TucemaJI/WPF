@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Lesson_1
 {
@@ -22,11 +12,9 @@ namespace Lesson_1
         public Window1()
         {
             InitializeComponent();
-            foreach (FontFamily F in Fonts.SystemFontFamilies)
+            foreach (FontFamily f in Fonts.SystemFontFamilies)
             {
-                ListBoxItem l = new ListBoxItem();
-                l.Content = F.ToString();
-                l.FontFamily = F;
+                var l = new ListBoxItem { Content = f.ToString(), FontFamily = f };
                 listBox1.Items.Add(l);
             }
         }
