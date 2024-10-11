@@ -3,15 +3,24 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
      Title="Window1" Height="350" Width="523">
     <Grid Name="Grid1">
-        <ListBox Margin="22,40,281,149" Name="listBox1" />
-        <ListBox Margin="0,40,68,149" Name="listBox2" HorizontalAlignment="Right" Width="192" />
-        <Label Height="23" HorizontalAlignment="Left" Margin="22,13,0,0" Name="label1" VerticalAlignment="Top" Width="198">Contact Name</Label>
+        <ListBox ItemsSource="{Binding}" DisplayMemberPath="ContactName" IsSynchronizedWithCurrentItem="True"
+                 Margin="22,40,281,149" Name="listBox1" />
+        <ListBox ItemsSource="{Binding Path=CustomersOrders}" DisplayMemberPath="OrderDate"
+                 IsSynchronizedWithCurrentItem="True" Margin="0,40,68,149" Name="listBox2"
+                 HorizontalAlignment="Right" Width="192" />
+        <Label Height="23" HorizontalAlignment="Left" Margin="22,13,0,0" Name="label1" VerticalAlignment="Top"
+               Width="198">Contact Name</Label>
         <Label Height="24" Margin="241,13,68,0" Name="label2" VerticalAlignment="Top">Order Date</Label>
-        <TextBox  Height="21" HorizontalAlignment="Left" Margin="92,0,0,96" Name="textBox1" VerticalAlignment="Bottom" Width="120" />
-        <TextBox  Height="21" HorizontalAlignment="Left" Margin="92,0,0,66" Name="textBox2" VerticalAlignment="Bottom" Width="120" />
-        <TextBox  Height="21" HorizontalAlignment="Left" Margin="92,0,0,38" Name="textBox3" VerticalAlignment="Bottom" Width="120" />
-        <TextBox Height="21" HorizontalAlignment="Left" Margin="92,0,0,8" Name="textBox4" VerticalAlignment="Bottom" Width="120" />
-        <ListBox Height="109" Margin="241,0,68,8" Name="listBox3" VerticalAlignment="Bottom" />
+        <TextBox Text="{Binding Path=CustomersOrders/ShipName}" Height="21" HorizontalAlignment="Left" Margin="92,0,0,96"
+                 Name="textBox1" VerticalAlignment="Bottom" Width="120" />
+        <TextBox Text="{Binding Path=CustomersOrders/ShipAddress}" Height="21" HorizontalAlignment="Left" Margin="92,0,0,66"
+                 Name="textBox2" VerticalAlignment="Bottom" Width="120" />
+        <TextBox Text="{Binding Path=CustomersOrders/ShipCity}" Height="21" HorizontalAlignment="Left" Margin="92,0,0,38"
+                 Name="textBox3" VerticalAlignment="Bottom" Width="120" />
+        <TextBox Text="{Binding Path=CustomersOrders/ShipRegion}" Height="21" HorizontalAlignment="Left" Margin="92,0,0,8"
+                 Name="textBox4" VerticalAlignment="Bottom" Width="120" />
+        <ListBox ItemsSource="{Binding Path=CustomersOrders/Orders_Order_Details_Extended}" DisplayMemberPath="ProductName"
+                 Height="109" Margin="241,0,68,8" Name="listBox3" VerticalAlignment="Bottom" />
         <Label Height="23" Margin="241,0,68,120" Name="label3" VerticalAlignment="Bottom">Products Ordered</Label>
         <Label Height="30" HorizontalAlignment="Left" Margin="10,0,0,87" Name="label4" VerticalAlignment="Bottom" Width="75">Ship Name</Label>
         <Label Height="23" HorizontalAlignment="Left" Margin="10,0,0,64" Name="label5" VerticalAlignment="Bottom" Width="75">Address</Label>

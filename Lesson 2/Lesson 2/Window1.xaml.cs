@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using Lesson_2.NwindDataSetTableAdapters;
 
 namespace Lesson_2
 {
@@ -19,9 +8,20 @@ namespace Lesson_2
     /// </summary>
     public partial class Window1 : Window
     {
+        NwindDataSet aset = new NwindDataSet();
+        CustomersTableAdapter custAdap = new CustomersTableAdapter();
+        OrdersTableAdapter ordAdap = new OrdersTableAdapter();
+        Order_Details_ExtendedTableAdapter ord_det_extAdap = new Order_Details_ExtendedTableAdapter();
+
         public Window1()
         {
             InitializeComponent();
+
+            custAdap.Fill(aset.Customers);
+            ordAdap.Fill(aset.Orders);
+            ord_det_extAdap.Fill(aset.Order_Details_Extended);
+
+            Grid1.DataContext = aset.Customers;
         }
     }
 }
