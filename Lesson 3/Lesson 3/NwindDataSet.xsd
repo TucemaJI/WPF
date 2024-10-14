@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NwindDataSet" targetNamespace="http://tempuri.org/NwindDataSet.xsd" xmlns:mstns="http://tempuri.org/NwindDataSet.xsd" xmlns="http://tempuri.org/NwindDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="NwindConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="NwindConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Lesson_3.Properties.Settings.GlobalReference.Default.NwindConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CustomersTableAdapter" GeneratorDataComponentClassName="CustomersTableAdapter" Name="Customers" UserDataComponentName="CustomersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NwindConnectionString (Settings)" DbObjectName="dbo.Customers" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax
+FROM          Customers</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CustomerID" DataSetColumn="CustomerID" />
+              <Mapping SourceColumn="CompanyName" DataSetColumn="CompanyName" />
+              <Mapping SourceColumn="ContactName" DataSetColumn="ContactName" />
+              <Mapping SourceColumn="ContactTitle" DataSetColumn="ContactTitle" />
+              <Mapping SourceColumn="Address" DataSetColumn="Address" />
+              <Mapping SourceColumn="City" DataSetColumn="City" />
+              <Mapping SourceColumn="Region" DataSetColumn="Region" />
+              <Mapping SourceColumn="PostalCode" DataSetColumn="PostalCode" />
+              <Mapping SourceColumn="Country" DataSetColumn="Country" />
+              <Mapping SourceColumn="Phone" DataSetColumn="Phone" />
+              <Mapping SourceColumn="Fax" DataSetColumn="Fax" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrdersTableAdapter" GeneratorDataComponentClassName="OrdersTableAdapter" Name="Orders" UserDataComponentName="OrdersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NwindConnectionString (Settings)" DbObjectName="dbo.Orders" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Orders] WHERE (([OrderID] = @Original_OrderID) AND ([CustomerID] = @Original_CustomerID) AND ([EmployeeID] = @Original_EmployeeID) AND ([OrderDate] = @Original_OrderDate) AND ([RequiredDate] = @Original_RequiredDate) AND ([ShippedDate] = @Original_ShippedDate) AND ([ShipVia] = @Original_ShipVia) AND ([Freight] = @Original_Freight) AND ([ShipName] = @Original_ShipName) AND ([ShipAddress] = @Original_ShipAddress) AND ([ShipCity] = @Original_ShipCity) AND ([ShipRegion] = @Original_ShipRegion))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_OrderID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="OrderID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_CustomerID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="CustomerID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_EmployeeID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="EmployeeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_OrderDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="OrderDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_RequiredDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="RequiredDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_ShippedDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ShippedDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ShipVia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipVia" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Freight" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Freight" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ShipName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ShipAddress" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipAddress" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ShipCity" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipCity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ShipRegion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipRegion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Orders] ([OrderID], [CustomerID], [EmployeeID], [OrderDate], [RequiredDate], [ShippedDate], [ShipVia], [Freight], [ShipName], [ShipAddress], [ShipCity], [ShipRegion]) VALUES (@OrderID, @CustomerID, @EmployeeID, @OrderDate, @RequiredDate, @ShippedDate, @ShipVia, @Freight, @ShipName, @ShipAddress, @ShipCity, @ShipRegion);
+SELECT OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, ShipVia, Freight, ShipName, ShipAddress, ShipCity, ShipRegion FROM Orders WHERE (OrderID = @OrderID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@OrderID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="OrderID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@CustomerID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="CustomerID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@EmployeeID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="EmployeeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@OrderDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="OrderDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@RequiredDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="RequiredDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ShippedDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ShippedDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ShipVia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipVia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Freight" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Freight" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ShipName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ShipAddress" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipAddress" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ShipCity" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipCity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ShipRegion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipRegion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, ShipVia, Freight, ShipName, ShipAddress, ShipCity, ShipRegion
+FROM            Orders</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Orders] SET [OrderID] = @OrderID, [CustomerID] = @CustomerID, [EmployeeID] = @EmployeeID, [OrderDate] = @OrderDate, [RequiredDate] = @RequiredDate, [ShippedDate] = @ShippedDate, [ShipVia] = @ShipVia, [Freight] = @Freight, [ShipName] = @ShipName, [ShipAddress] = @ShipAddress, [ShipCity] = @ShipCity, [ShipRegion] = @ShipRegion WHERE (([OrderID] = @Original_OrderID) AND ([CustomerID] = @Original_CustomerID) AND ([EmployeeID] = @Original_EmployeeID) AND ([OrderDate] = @Original_OrderDate) AND ([RequiredDate] = @Original_RequiredDate) AND ([ShippedDate] = @Original_ShippedDate) AND ([ShipVia] = @Original_ShipVia) AND ([Freight] = @Original_Freight) AND ([ShipName] = @Original_ShipName) AND ([ShipAddress] = @Original_ShipAddress) AND ([ShipCity] = @Original_ShipCity) AND ([ShipRegion] = @Original_ShipRegion));
+SELECT OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, ShipVia, Freight, ShipName, ShipAddress, ShipCity, ShipRegion FROM Orders WHERE (OrderID = @OrderID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@OrderID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="OrderID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@CustomerID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="CustomerID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@EmployeeID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="EmployeeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@OrderDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="OrderDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@RequiredDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="RequiredDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ShippedDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ShippedDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ShipVia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipVia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Freight" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Freight" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ShipName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ShipAddress" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipAddress" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ShipCity" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipCity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ShipRegion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipRegion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_OrderID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="OrderID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_CustomerID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="CustomerID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_EmployeeID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="EmployeeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_OrderDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="OrderDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_RequiredDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="RequiredDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_ShippedDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ShippedDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ShipVia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipVia" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Freight" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Freight" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ShipName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ShipAddress" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipAddress" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ShipCity" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipCity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ShipRegion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ShipRegion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderID" DataSetColumn="OrderID" />
+              <Mapping SourceColumn="CustomerID" DataSetColumn="CustomerID" />
+              <Mapping SourceColumn="EmployeeID" DataSetColumn="EmployeeID" />
+              <Mapping SourceColumn="OrderDate" DataSetColumn="OrderDate" />
+              <Mapping SourceColumn="RequiredDate" DataSetColumn="RequiredDate" />
+              <Mapping SourceColumn="ShippedDate" DataSetColumn="ShippedDate" />
+              <Mapping SourceColumn="ShipVia" DataSetColumn="ShipVia" />
+              <Mapping SourceColumn="Freight" DataSetColumn="Freight" />
+              <Mapping SourceColumn="ShipName" DataSetColumn="ShipName" />
+              <Mapping SourceColumn="ShipAddress" DataSetColumn="ShipAddress" />
+              <Mapping SourceColumn="ShipCity" DataSetColumn="ShipCity" />
+              <Mapping SourceColumn="ShipRegion" DataSetColumn="ShipRegion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Order Details ExtendedTableAdapter" GeneratorDataComponentClassName="Order_Details_ExtendedTableAdapter" Name="Order Details Extended" UserDataComponentName="Order Details ExtendedTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NwindConnectionString (Settings)" DbObjectName="dbo.[Order Details Extended]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Order Details Extended] WHERE (([OrderID] = @Original_OrderID) AND ([ProductID] = @Original_ProductID) AND ([ProductName] = @Original_ProductName) AND ([UnitPrice] = @Original_UnitPrice) AND ([Quantity] = @Original_Quantity) AND ([Discount] = @Original_Discount) AND ([ExtendedPrice] = @Original_ExtendedPrice))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_OrderID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="OrderID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_ProductID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="ProductID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ProductName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ProductName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_UnitPrice" Precision="0" ProviderType="SmallMoney" Scale="0" Size="0" SourceColumn="UnitPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Quantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Quantity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Discount" Precision="0" ProviderType="SmallMoney" Scale="0" Size="0" SourceColumn="Discount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_ExtendedPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="ExtendedPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Order Details Extended] ([OrderID], [ProductID], [ProductName], [UnitPrice], [Quantity], [Discount], [ExtendedPrice]) VALUES (@OrderID, @ProductID, @ProductName, @UnitPrice, @Quantity, @Discount, @ExtendedPrice);
+SELECT OrderID, ProductID, ProductName, UnitPrice, Quantity, Discount, ExtendedPrice FROM [Order Details Extended] WHERE (OrderID = @OrderID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@OrderID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="OrderID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@ProductID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="ProductID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ProductName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ProductName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@UnitPrice" Precision="0" ProviderType="SmallMoney" Scale="0" Size="0" SourceColumn="UnitPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Quantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Quantity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Discount" Precision="0" ProviderType="SmallMoney" Scale="0" Size="0" SourceColumn="Discount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@ExtendedPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="ExtendedPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [Order Details Extended].*
+FROM            [Order Details Extended]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Order Details Extended] SET [OrderID] = @OrderID, [ProductID] = @ProductID, [ProductName] = @ProductName, [UnitPrice] = @UnitPrice, [Quantity] = @Quantity, [Discount] = @Discount, [ExtendedPrice] = @ExtendedPrice WHERE (([OrderID] = @Original_OrderID) AND ([ProductID] = @Original_ProductID) AND ([ProductName] = @Original_ProductName) AND ([UnitPrice] = @Original_UnitPrice) AND ([Quantity] = @Original_Quantity) AND ([Discount] = @Original_Discount) AND ([ExtendedPrice] = @Original_ExtendedPrice));
+SELECT OrderID, ProductID, ProductName, UnitPrice, Quantity, Discount, ExtendedPrice FROM [Order Details Extended] WHERE (OrderID = @OrderID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@OrderID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="OrderID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@ProductID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="ProductID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ProductName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ProductName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@UnitPrice" Precision="0" ProviderType="SmallMoney" Scale="0" Size="0" SourceColumn="UnitPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Quantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Quantity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Discount" Precision="0" ProviderType="SmallMoney" Scale="0" Size="0" SourceColumn="Discount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@ExtendedPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="ExtendedPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_OrderID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="OrderID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="@Original_ProductID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="ProductID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ProductName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ProductName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_UnitPrice" Precision="0" ProviderType="SmallMoney" Scale="0" Size="0" SourceColumn="UnitPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Quantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Quantity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Discount" Precision="0" ProviderType="SmallMoney" Scale="0" Size="0" SourceColumn="Discount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_ExtendedPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="ExtendedPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderID" DataSetColumn="OrderID" />
+              <Mapping SourceColumn="ProductID" DataSetColumn="ProductID" />
+              <Mapping SourceColumn="ProductName" DataSetColumn="ProductName" />
+              <Mapping SourceColumn="UnitPrice" DataSetColumn="UnitPrice" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+              <Mapping SourceColumn="Discount" DataSetColumn="Discount" />
+              <Mapping SourceColumn="ExtendedPrice" DataSetColumn="ExtendedPrice" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="NwindDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="NwindDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="NwindDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Customers" msprop:Generator_RowClassName="CustomersRow" msprop:Generator_RowEvHandlerName="CustomersRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomersRowDeleted" msprop:Generator_RowDeletingName="CustomersRowDeleting" msprop:Generator_RowEvArgName="CustomersRowChangeEvent" msprop:Generator_TablePropName="Customers" msprop:Generator_RowChangedName="CustomersRowChanged" msprop:Generator_UserTableName="Customers" msprop:Generator_RowChangingName="CustomersRowChanging" msprop:Generator_TableClassName="CustomersDataTable" msprop:Generator_TableVarName="tableCustomers">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="CustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnVarNameInTable="columnCustomerID" type="xs:string" />
+              <xs:element name="CompanyName" msprop:Generator_UserColumnName="CompanyName" msprop:Generator_ColumnPropNameInTable="CompanyNameColumn" msprop:Generator_ColumnPropNameInRow="CompanyName" msprop:Generator_ColumnVarNameInTable="columnCompanyName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ContactName" msprop:Generator_UserColumnName="ContactName" msprop:Generator_ColumnPropNameInTable="ContactNameColumn" msprop:Generator_ColumnPropNameInRow="ContactName" msprop:Generator_ColumnVarNameInTable="columnContactName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ContactTitle" msprop:Generator_UserColumnName="ContactTitle" msprop:Generator_ColumnPropNameInTable="ContactTitleColumn" msprop:Generator_ColumnPropNameInRow="ContactTitle" msprop:Generator_ColumnVarNameInTable="columnContactTitle">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address" msprop:Generator_UserColumnName="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnVarNameInTable="columnAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="City" msprop:Generator_UserColumnName="City" msprop:Generator_ColumnPropNameInTable="CityColumn" msprop:Generator_ColumnPropNameInRow="City" msprop:Generator_ColumnVarNameInTable="columnCity">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Region" msprop:Generator_UserColumnName="Region" msprop:Generator_ColumnPropNameInTable="RegionColumn" msprop:Generator_ColumnPropNameInRow="Region" msprop:Generator_ColumnVarNameInTable="columnRegion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PostalCode" msprop:Generator_UserColumnName="PostalCode" msprop:Generator_ColumnPropNameInTable="PostalCodeColumn" msprop:Generator_ColumnPropNameInRow="PostalCode" msprop:Generator_ColumnVarNameInTable="columnPostalCode" type="xs:int" />
+              <xs:element name="Country" msprop:Generator_UserColumnName="Country" msprop:Generator_ColumnPropNameInTable="CountryColumn" msprop:Generator_ColumnPropNameInRow="Country" msprop:Generator_ColumnVarNameInTable="columnCountry">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Phone" msprop:Generator_UserColumnName="Phone" msprop:Generator_ColumnPropNameInTable="PhoneColumn" msprop:Generator_ColumnPropNameInRow="Phone" msprop:Generator_ColumnVarNameInTable="columnPhone" type="xs:long" />
+              <xs:element name="Fax" msprop:Generator_UserColumnName="Fax" msprop:Generator_ColumnPropNameInTable="FaxColumn" msprop:Generator_ColumnPropNameInRow="Fax" msprop:Generator_ColumnVarNameInTable="columnFax" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Orders" msprop:Generator_RowClassName="OrdersRow" msprop:Generator_RowEvHandlerName="OrdersRowChangeEventHandler" msprop:Generator_RowDeletedName="OrdersRowDeleted" msprop:Generator_RowDeletingName="OrdersRowDeleting" msprop:Generator_RowEvArgName="OrdersRowChangeEvent" msprop:Generator_TablePropName="Orders" msprop:Generator_RowChangedName="OrdersRowChanged" msprop:Generator_UserTableName="Orders" msprop:Generator_RowChangingName="OrdersRowChanging" msprop:Generator_TableClassName="OrdersDataTable" msprop:Generator_TableVarName="tableOrders">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="OrderID" msprop:Generator_ColumnPropNameInTable="OrderIDColumn" msprop:Generator_ColumnPropNameInRow="OrderID" msprop:Generator_ColumnVarNameInTable="columnOrderID" type="xs:string" />
+              <xs:element name="CustomerID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="CustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnVarNameInTable="columnCustomerID" type="xs:string" />
+              <xs:element name="EmployeeID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" type="xs:string" />
+              <xs:element name="OrderDate" msprop:Generator_UserColumnName="OrderDate" msprop:Generator_ColumnPropNameInTable="OrderDateColumn" msprop:Generator_ColumnPropNameInRow="OrderDate" msprop:Generator_ColumnVarNameInTable="columnOrderDate" type="xs:dateTime" />
+              <xs:element name="RequiredDate" msprop:Generator_UserColumnName="RequiredDate" msprop:Generator_ColumnPropNameInTable="RequiredDateColumn" msprop:Generator_ColumnPropNameInRow="RequiredDate" msprop:Generator_ColumnVarNameInTable="columnRequiredDate" type="xs:dateTime" />
+              <xs:element name="ShippedDate" msprop:Generator_UserColumnName="ShippedDate" msprop:Generator_ColumnPropNameInTable="ShippedDateColumn" msprop:Generator_ColumnPropNameInRow="ShippedDate" msprop:Generator_ColumnVarNameInTable="columnShippedDate" type="xs:dateTime" />
+              <xs:element name="ShipVia" msprop:Generator_UserColumnName="ShipVia" msprop:Generator_ColumnPropNameInTable="ShipViaColumn" msprop:Generator_ColumnPropNameInRow="ShipVia" msprop:Generator_ColumnVarNameInTable="columnShipVia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Freight" msprop:Generator_UserColumnName="Freight" msprop:Generator_ColumnPropNameInTable="FreightColumn" msprop:Generator_ColumnPropNameInRow="Freight" msprop:Generator_ColumnVarNameInTable="columnFreight">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShipName" msprop:Generator_UserColumnName="ShipName" msprop:Generator_ColumnPropNameInTable="ShipNameColumn" msprop:Generator_ColumnPropNameInRow="ShipName" msprop:Generator_ColumnVarNameInTable="columnShipName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShipAddress" msprop:Generator_UserColumnName="ShipAddress" msprop:Generator_ColumnPropNameInTable="ShipAddressColumn" msprop:Generator_ColumnPropNameInRow="ShipAddress" msprop:Generator_ColumnVarNameInTable="columnShipAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShipCity" msprop:Generator_UserColumnName="ShipCity" msprop:Generator_ColumnPropNameInTable="ShipCityColumn" msprop:Generator_ColumnPropNameInRow="ShipCity" msprop:Generator_ColumnVarNameInTable="columnShipCity">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShipRegion" msprop:Generator_UserColumnName="ShipRegion" msprop:Generator_ColumnPropNameInTable="ShipRegionColumn" msprop:Generator_ColumnPropNameInRow="ShipRegion" msprop:Generator_ColumnVarNameInTable="columnShipRegion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Order_x0020_Details_x0020_Extended" msprop:Generator_RowClassName="Order_Details_ExtendedRow" msprop:Generator_RowEvHandlerName="Order_Details_ExtendedRowChangeEventHandler" msprop:Generator_RowDeletedName="Order_Details_ExtendedRowDeleted" msprop:Generator_RowDeletingName="Order_Details_ExtendedRowDeleting" msprop:Generator_RowEvArgName="Order_Details_ExtendedRowChangeEvent" msprop:Generator_TablePropName="Order_Details_Extended" msprop:Generator_RowChangedName="Order_Details_ExtendedRowChanged" msprop:Generator_UserTableName="Order Details Extended" msprop:Generator_RowChangingName="Order_Details_ExtendedRowChanging" msprop:Generator_TableClassName="Order_Details_ExtendedDataTable" msprop:Generator_TableVarName="tableOrder_Details_Extended">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="OrderID" msprop:Generator_ColumnPropNameInTable="OrderIDColumn" msprop:Generator_ColumnPropNameInRow="OrderID" msprop:Generator_ColumnVarNameInTable="columnOrderID" type="xs:string" />
+              <xs:element name="ProductID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="ProductID" msprop:Generator_ColumnPropNameInTable="ProductIDColumn" msprop:Generator_ColumnPropNameInRow="ProductID" msprop:Generator_ColumnVarNameInTable="columnProductID" type="xs:string" />
+              <xs:element name="ProductName" msprop:Generator_UserColumnName="ProductName" msprop:Generator_ColumnPropNameInTable="ProductNameColumn" msprop:Generator_ColumnPropNameInRow="ProductName" msprop:Generator_ColumnVarNameInTable="columnProductName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UnitPrice" msprop:Generator_UserColumnName="UnitPrice" msprop:Generator_ColumnPropNameInTable="UnitPriceColumn" msprop:Generator_ColumnPropNameInRow="UnitPrice" msprop:Generator_ColumnVarNameInTable="columnUnitPrice" type="xs:decimal" />
+              <xs:element name="Quantity" msprop:Generator_UserColumnName="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" type="xs:int" />
+              <xs:element name="Discount" msprop:Generator_UserColumnName="Discount" msprop:Generator_ColumnPropNameInTable="DiscountColumn" msprop:Generator_ColumnPropNameInRow="Discount" msprop:Generator_ColumnVarNameInTable="columnDiscount" type="xs:decimal" />
+              <xs:element name="ExtendedPrice" msprop:Generator_UserColumnName="ExtendedPrice" msprop:Generator_ColumnPropNameInTable="ExtendedPriceColumn" msprop:Generator_ColumnPropNameInRow="ExtendedPrice" msprop:Generator_ColumnVarNameInTable="columnExtendedPrice" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Customers" />
+      <xs:field xpath="mstns:CustomerID" />
+    </xs:unique>
+    <xs:unique name="Orders_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Orders" />
+      <xs:field xpath="mstns:OrderID" />
+    </xs:unique>
+    <xs:unique name="Order_x0020_Details_x0020_Extended_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Order_x0020_Details_x0020_Extended" />
+      <xs:field xpath="mstns:OrderID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Orders_Order_Details_Extended" msdata:parent="Orders" msdata:child="Order_x0020_Details_x0020_Extended" msdata:parentkey="OrderID" msdata:childkey="OrderID" msprop:Generator_UserParentTable="Orders" msprop:Generator_UserChildTable="Order Details Extended" msprop:Generator_RelationVarName="relationOrders_Order_Details_Extended" msprop:Generator_ChildPropName="GetOrder_Details_ExtendedRows" msprop:Generator_UserRelationName="Orders_Order_Details_Extended" msprop:Generator_ParentPropName="OrdersRow" />
+      <msdata:Relationship name="CustomersOrders" msdata:parent="Customers" msdata:child="Orders" msdata:parentkey="CustomerID" msdata:childkey="CustomerID" msprop:Generator_UserParentTable="Customers" msprop:Generator_UserChildTable="Orders" msprop:Generator_RelationVarName="relationCustomersOrders" msprop:Generator_ChildPropName="GetOrdersRows" msprop:Generator_UserRelationName="CustomersOrders" msprop:Generator_ParentPropName="CustomersRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
