@@ -15,7 +15,19 @@
             <Setter Property="Height" Value="30"/>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="FontSize" Value="20"/>
+                    <Trigger.EnterActions>
+                        <BeginStoryboard Name="Storyboard1">
+                            <Storyboard Duration="0:0:1">
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="20"/>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="26,118,45,104"/>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="210"/>
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="40"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <StopStoryboard BeginStoryboardName="Storyboard1"/>
+                    </Trigger.ExitActions>
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -26,7 +38,19 @@
             <Setter Property="Height" Value="33"/>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="FontSize" Value="20"/>
+                    <Trigger.EnterActions>
+                        <BeginStoryboard Name="Storyboard1">
+                            <Storyboard Duration="0:0:1">
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="20"/>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="26,62,46,-10"/>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="210"/>
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="40"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <StopStoryboard BeginStoryboardName="Storyboard1"/>
+                    </Trigger.ExitActions>
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -37,7 +61,19 @@
             <Setter Property="Height" Value="30"/>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="FontSize" Value="20"/>
+                    <Trigger.EnterActions>
+                        <BeginStoryboard Name="Storyboard1">
+                            <Storyboard Duration="0:0:1">
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="20"/>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="26,0,46,52"/>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="210"/>
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="40"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <StopStoryboard BeginStoryboardName="Storyboard1"/>
+                    </Trigger.ExitActions>
                 </Trigger>
             </Style.Triggers>
         </Style>
