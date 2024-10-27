@@ -3,6 +3,32 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Title="Window1" Height="457" Width="665">
     <Grid>
-        
+        <FlowDocumentReader>
+            <FlowDocument>
+                <Paragraph FontSize="20" FontWeight="Bold">
+                    Brief thoughts on the Rime of the Ancient Mariner
+                </Paragraph>
+                <Paragraph>
+                    The Rime of the Ancient Mariner by Samuel Taylor Coleridge is an epic poem that describes the tale of a man cursed to wander the earth as penance for shooting an albatross. The great illustrator Gustave Dore engraved a set of illustrations for an edition of this poem.
+                    <Floater Width="150">
+                        <BlockUIContainer>
+                            <Image Source="Dore.jpg"/>
+                        </BlockUIContainer>
+                        <Paragraph FontSize="10">
+                            A representative example of Dore's engraving from the Rime of the Ancient Mariner.
+                        </Paragraph>
+                    </Floater>
+                </Paragraph>
+                <Paragraph>The ancient mariner travels on board a ship that visits the south pole  and encounters ice and snow, until an albatross appears and confers good fortune to the sailing vessel. The ancient mariner spitefully kills the albatross, and a series of supernatural events begins to unfold that eventually returns the mariner to his home country, after many tribulations. Among the many themes of this work are included respect for nature.
+                           The poem is one of the most enduring and best known works of author Samuel Talyor Coleridge. Many verses are commonly referenced in popular culture, including the following:
+                </Paragraph>
+                <Paragraph TextAlignment="Center">
+                    Water, water, everywhere,<LineBreak/>
+                    And all the boards did shrink;<LineBreak/>
+                    Water, water, everywhere,<LineBreak/>
+                    Nor any drop to drink.<LineBreak/>
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentReader>
     </Grid>
 </Window>
